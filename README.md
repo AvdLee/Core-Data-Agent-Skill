@@ -12,6 +12,7 @@ Based on the [Core Data Best Practices](https://github.com/AvdLee/CoreDataBestPr
 ## See also my other skills:
 - [Swift Concurrency Expert](https://github.com/AvdLee/Swift-Concurrency-Agent-Skill)
 - [SwiftUI Expert](https://github.com/AvdLee/SwiftUI-Agent-Skill)
+- [Swift Testing Expert](https://github.com/AvdLee/Swift-Testing-Agent-Skill)
 
 ## How to Use This Skill
 
