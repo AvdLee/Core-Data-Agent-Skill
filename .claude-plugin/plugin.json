@@ -25,5 +25,7 @@
     "swift",
     "apple"
   ],
-  "skills": ["./core-data-expert"]
+  "skills": [
+    "./core-data-expert"
+  ]
 }
