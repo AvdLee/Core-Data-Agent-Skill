@@ -51,8 +51,7 @@
       "source": "./",
       "skills": [
         "./core-data-expert"
-      ],
-      "strict": false
+      ]
     }
   ]
 }
