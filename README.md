@@ -67,7 +67,7 @@ When team members open the project, Claude Code will prompt them to install the 
 
 ### Option C: Using pi package manager
 
-Install via [pi](https://github.com/mariozechner/pi-mono):
+Install via [pi](https://github.com/badlogic/pi-mono):
 ```bash
 pi install https://github.com/AvdLee/Core-Data-Agent-Skill
 ```
