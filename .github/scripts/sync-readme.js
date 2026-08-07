@@ -3,7 +3,7 @@ const path = require("path");
 const { execSync } = require("child_process");
 
 const README_PATH = path.join(process.cwd(), "README.md");
-const REFERENCES_DIR = path.join(process.cwd(), "core-data-expert/references");
+const REFERENCES_DIR = path.join(process.cwd(), "skills/core-data-expert/references");
 const DEFAULT_BASE_REF = "main";
 
 const execGit = (command) => execSync(command, { encoding: "utf8" }).trim();
@@ -23,7 +23,7 @@ const getBaseRef = (eventPayload) =>
 
 const getReferenceChanges = (baseRef) => {
   const diff = execGit(
-    `git diff origin/${baseRef}...HEAD --name-status -- "core-data-expert/references"`
+    `git diff origin/${baseRef}...HEAD --name-status -- "skills/core-data-expert/references"`
   );
   return diff;
 };
@@ -48,7 +48,7 @@ const buildStructureBlock = (referenceFiles, existingDescriptions) => {
   );
 
   const lines = [];
-  lines.push("core-data-expert/");
+  lines.push("skills/core-data-expert/");
   const skillDescription =
     existingDescriptions.get("SKILL.md") || "Main skill file with decision trees";
   lines.push(

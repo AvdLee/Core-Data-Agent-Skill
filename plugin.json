@@ -1,11 +1,14 @@
 {
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "core-data-expert",
   "version": "1.1.0",
   "description": "Expert guidance on Core Data persistence, data modeling, and performance. Covers NSPersistentContainer, fetch optimization, threading with NSManagedObjectID, batch operations, schema migration, and NSPersistentCloudKitContainer integration.",
   "author": {
     "name": "Antoine van der Lee",
-    "email": "contact@avanderlee.com"
+    "email": "contact@avanderlee.com",
+    "url": "https://www.avanderlee.com"
   },
+  "homepage": "https://github.com/AvdLee/Core-Data-Agent-Skill",
   "repository": "https://github.com/AvdLee/Core-Data-Agent-Skill",
   "license": "MIT",
   "keywords": [
@@ -24,8 +27,5 @@
     "macos",
     "swift",
     "apple"
-  ],
-  "skills": [
-    "./skills/core-data-expert"
   ]
 }

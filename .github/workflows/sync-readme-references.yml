@@ -3,7 +3,7 @@ name: Sync README reference structure
 on:
   pull_request:
     paths:
-      - "core-data-expert/references/**"
+      - "skills/core-data-expert/references/**"
 
 jobs:
   sync-readme:
