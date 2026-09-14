@@ -21,10 +21,12 @@ Based on the [Core Data Best Practices](https://github.com/AvdLee/CoreDataBestPr
 ### Option A: Using skills.sh (recommended)
 Install this skill with a single command:
 ```bash
-npx skills add https://github.com/avdlee/core-data-agent-skill --skill core-data-expert
+npx skills@latest add https://github.com/avdlee/core-data-agent-skill --skill core-data-expert
 ```
 
 For more information, visit the [skills.sh platform page](https://skills.sh/avdlee/core-data-agent-skill/core-data-expert).
+
+> Installed before the Agent Plugins migration? Run `npx skills@latest update` using skills CLI 1.5.24 or newer. It migrates the saved skill path without treating the skill as deleted.
 
 Then use the skill in your AI agent, for example:  
 > Use the core data skill and analyze the current project for Core Data improvements
