@@ -2,6 +2,8 @@
 
 Expert guidance for any AI coding tool that supports the [Agent Skills open format](https://agentskills.io/home) — safe persistence, performance optimization, and schema migration.
 
+This repository is packaged as a portable [Agent Plugin](https://agent-plugins.org) (spec 1.0.0): compatible clients discover the skill automatically from the root `plugin.json` manifest and the `skills/` directory. Client-specific manifests for Claude Code, Cursor, Codex, and pi are included as well.
+
 Based on the [Core Data Best Practices](https://github.com/AvdLee/CoreDataBestPractices) repo, WeTransfer production apps, and WWDC sessions, distilled into actionable, concise references for agents.
 
 ## Who this is for
@@ -19,10 +21,12 @@ Based on the [Core Data Best Practices](https://github.com/AvdLee/CoreDataBestPr
 ### Option A: Using skills.sh (recommended)
 Install this skill with a single command:
 ```bash
-npx skills add https://github.com/avdlee/core-data-agent-skill --skill core-data-expert
+npx skills@latest add https://github.com/avdlee/core-data-agent-skill --skill core-data-expert
 ```
 
 For more information, visit the [skills.sh platform page](https://skills.sh/avdlee/core-data-agent-skill/core-data-expert).
+
+> Installed before the Agent Plugins migration? Run `npx skills@latest update` using skills CLI 1.5.24 or newer. It migrates the saved skill path without treating the skill as deleted.
 
 Then use the skill in your AI agent, for example:  
 > Use the core data skill and analyze the current project for Core Data improvements
@@ -65,10 +69,16 @@ To automatically provide this Skill to everyone working in a repository, configu
 
 When team members open the project, Claude Code will prompt them to install the Skill.
 
-### Option C: Manual install
+### Option C: Cursor Plugin
+
+Load the plugin from a local clone by placing it in `~/.cursor/plugins/local`, or install it from the Cursor Marketplace once listed. Cursor supports both the portable Agent Plugins manifest (`plugin.json`) and the Cursor Plugin manifest (`.cursor-plugin/plugin.json`) included in this repository.
+
+### Option D: Manual install
 1) **Clone** this repository.  
-2) **Install or symlink** the `core-data-expert/` folder following your tool's official skills installation docs (see links below).  
+2) **Install or symlink** the `skills/core-data-expert/` folder following your tool's official skills installation docs (see links below).  
 3) **Use your AI tool** as usual and ask it to use the "core-data-expert" skill for Core Data tasks.
+
+> Note: the skill folder moved from the repository root to `skills/core-data-expert/` when adopting the Agent Plugins format. A symlink at the old `core-data-expert/` path keeps existing local clones and scripts working; it will be removed in the next major version.
 
 #### Where to Save Skills
 
@@ -79,7 +89,7 @@ Follow your tool's official documentation, here are a few popular ones:
 
 **How to verify**: 
 
-Your agent should reference the triage/playbook in `core-data-expert/SKILL.md` and jump into the relevant reference file for your error or task.
+Your agent should reference the triage/playbook in `skills/core-data-expert/SKILL.md` and jump into the relevant reference file for your error or task.
 
 ## What This Skill Offers
 
@@ -133,7 +143,7 @@ This skill gives your AI coding tool comprehensive Core Data guidance. It can:
 ## Skill Structure
 
 ```
-core-data-expert/
+skills/core-data-expert/
 ├── SKILL.md                       # Main skill file with decision trees
 └── references/
     ├── _index.md                  # Navigation index

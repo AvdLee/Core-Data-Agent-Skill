@@ -198,7 +198,7 @@ To test your changes locally:
 ## ❓ Questions?
 
 - **About Agent Skills format**: See [agentskills.io](https://agentskills.io/home) or [Anthropic's docs](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview)
-- **About Core Data**: Check the [references folder](core-data-expert/references/) or [SwiftLee blog](https://www.avanderlee.com/category/core-data/)
+- **About Core Data**: Check the [references folder](skills/core-data-expert/references/) or [SwiftLee blog](https://www.avanderlee.com/category/core-data/)
 - **About this skill**: Open an issue for discussion
 
 ## 📄 License

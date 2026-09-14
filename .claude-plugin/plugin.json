@@ -1,6 +1,6 @@
 {
   "name": "core-data-expert",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Expert guidance on Core Data persistence, data modeling, and performance. Covers NSPersistentContainer, fetch optimization, threading with NSManagedObjectID, batch operations, schema migration, and NSPersistentCloudKitContainer integration.",
   "author": {
     "name": "Antoine van der Lee",
@@ -26,6 +26,6 @@
     "apple"
   ],
   "skills": [
-    "./core-data-expert"
+    "./skills/core-data-expert"
   ]
 }
